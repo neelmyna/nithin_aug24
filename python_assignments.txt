@@ -16,6 +16,29 @@ Sneha Mathai		: 1
 Sreejith J			: 1
 Tanveer Alam Ansari	: 
 -------------------------------------------------------------
+https://github.com/GayathriiMadhu/quest_python
+
+https://github.com/Aswathy-US/quest_python
+
+https://github.com/Albin-Sabu/quest_python
+
+https://github.com/Akarsh-A123/Quest_python.git
+
+https://github.com/Archana802/quest_python
+
+https://github.com/D-R-Gokul/quest_python
+
+https://github.com/Sneha-Mathai64/quest_python
+
+https://github.com/ashly-1234/quest_python
+
+https://github.com/DevikaAshok12/Quest-Global-Python-Training.git
+
+https://github.com/Akshara112/quest_python
+
+https://github.com/arshatj361/quest_python
+
+-------------------------------------------------------------
 ASSIGNMENTS:
 Day1:
 1. List the unique characteristics/features of Python
