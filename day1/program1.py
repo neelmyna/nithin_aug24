@@ -1,10 +1,13 @@
-# Check if the user given number is Perfect Square or not.
-import math
+'''
+Program to accept number of lines of a Triangle and draw the Trianlge:
+*
+**
+***
+****
+*****
+'''
+number_of_lines = int(input('Enter number of lines of the Triangle: '))
 
-input_number = int(input("Enter a number to check if it is Perfect Square: "))
-root_number = int(math.sqrt(input_number))
-root_number_square = root_number * root_number
-if root_number_square == input_number:
-    print(f'{input_number} is Prefect Square')
-else:
-    print(f'{input_number} is not a Prefect Square')
+for i in range(1, number_of_lines+1):
+    print('*' * i)
+
