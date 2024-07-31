@@ -301,19 +301,260 @@ if num1 < num2:
     print('Num1 = ', num1, ' is smallest')
 else:
     print('Num2 = ' + str(num2) + ' is smallest')
--------------------------------------------------------------
-ASSIGNMENTS:
-Day1:
-1. List the unique characteristics/features of Python
-2. Write a program to check if a number is Even.
-3. Write a program to convert a lower case letter to upper case.
-4. Check if a letter is vowel or consonant
-5. Check if a number is single digit or not.
+----------------------------------------------
+Day2: Wednesday 31-07-2024
 
-Day2:
-2. What is the alternative implementation of function overloading in Python?
-3. Why there is no implicit type casting in Python ?
-4. Why there is no ++ and -- (increment/decrement) operators in Python?
-5. What is the difference between @static method and @class method?
-6. What is the difference between __new__() and __init__() ?
-7. 
+p5.
+Accept the average score from the user (integer) and print the result as follows:
+0  to 49		Fail
+50 to 74		second class
+75 to 90		frist class
+91 to 100		distinction
+Also check for the invalid i/p.
+
+average_score = int(input('Enter your average score to print the result: '))
+if (average_score >= 0 and average_score <= 49):
+    print('Result is Fail')
+elif( average_score <=74):
+    print('Result is Second class')
+elif(average_score <= 90):
+    print('Result is First class')
+elif(average_score <= 100):
+    print('Result is Distinction')
+else:
+    print('Invalid input enetered')
+--------------------------------------------------
+SWITCH CASE:
+1. Accept the food item number from the user and serve him the food.
+
+#Accept the food item number from the user and serve him the food.
+
+food_items = {
+    1 : 'Mysuru Filter Coffee',
+    2 : 'Yummy Idly-vada',
+    3 : 'Worlds soft Mysuru Mailari Dosa',
+    4 : 'Bhupal Special Poha',
+    5 : 'Bengaluru tamato-peanuts Upama'
+}
+print('Welcome to our hotel Rameshwaram Cafe')
+print('1:Coffee 2:Idly-Vada 3:Dosa 4:Poha 5:Upama')
+food_item_number = int(input('Enter the food item number that you wish:'))
+if food_item_number < 1 or food_item_number > 5:
+    print('Invalid choice entered')
+else:
+    print('Your ' + food_items.get(food_item_number) + ' is here')
+print('Thank you, Visit again')
+--------------------------------------------------
+2. Accept the food type (veg or non-veg) from the user and then prompt her for the food item number and serve her the food.
+
+#Accept the food item number from the user and serve him the food.
+import sys
+
+veg_food_items = {
+    1 : 'Mysuru Filter Coffee',
+    2 : 'Yummy Idly-vada',
+    3 : 'Worlds soft Mysuru Mailari Dosa',
+    4 : 'Bhupal Special Poha',
+    5 : 'Bengaluru tamato-peanuts Upama'
+}
+non_veg_food_items = {
+    1 : 'Egg Pokoda',
+    2 : 'Chicken Biryani',
+    3 : 'Fish Fry',
+    4 : 'Mutton Masala'
+}
+food_types = {
+    1 : veg_food_items,
+    2 : non_veg_food_items
+} 
+food_items = {
+    1 : '1:Coffee 2:Idly-Vada 3:Dosa 4:Poha 5:Upama',
+    2 : '1:Egg Pokoda 2:Chicken Biryani 3:Fish Fry'
+}
+
+print('Welcome to our hotel The Taste')
+user_choice = int(input('1:Veg 2:Non-Veg \t Your choice please: ')) 
+items = food_items.get(user_choice, 'Invalid')
+if items == 'Invalid':
+    sys.exit('Invalid choice entered')
+print(items)
+food_item_number = int(input('Enter the food item number that you wish:'))
+
+print('Your ' + food_types.get(user_choice).get(food_item_number) + ' is here')
+
+print('Thank you, Visit again')
+--------------------------------------------------
+3. Repeat the problem 2 for multiple orders. In each order the customer will order one food item only.
+
+#Accept the food item number from the user and serve him the food.
+import sys
+
+veg_items = {
+    1 : 'Mysuru Filter Coffee',
+    2 : 'Yummy Idly-vada',
+    3 : 'Worlds soft Mysuru Mailari Dosa',
+    4 : 'Bhupal Special Poha',
+    5 : 'Bengaluru tamato-peanuts Upama'
+}
+nonveg_items = {
+    1 : 'Egg Pokoda',
+    2 : 'Chicken Biryani',
+    3 : 'Fish Fry',
+    4 : 'Mutton Masala'
+}
+food_types = {
+    1 : veg_items,
+    2 : nonveg_items
+}
+food_menu = {
+    1 : '1:Coffee 2:Idly-Vada 3:Dosa 4:Poha 5:Upama',
+    2 : '1:Egg Pokoda 2:Chicken Biryani 3:Fish Fry'
+}
+
+print('Welcome to our hotel The Taste')
+while True:
+    user_choice = int(input('1:Veg 2:Non-Veg \t Your choice please: ')) 
+    items = food_menu.get(user_choice, 'Invalid')
+    if items == 'Invalid':
+        print('Invalid choice entered')
+        break
+    print(items)
+    food_item_number = int(input('Enter item number that you wish have:'))
+
+    print('Your ' + food_types.get(user_choice).get(food_item_number) + ' is here')
+    user_choice = int(input('Do you wish to have more: Press 1 if yes: '))
+    if user_choice != 1:
+        break
+print('Thank you, Visit again')
+------------------------------------------------------
+GitHub:
+
+1. Create git hub account. Verify with the OTP sent to your email.
+2. Generate PAT.
+	my_icon -> seetings -> developer settings -> create personal access token -> classic -> select Repo and 2 other options
+3. Copy and save the PAT in a file and save the file in C:\software folder.
+4. Now download and install git.
+5. Now, go into your working folder and open the command prompt.
+6. Go to your repository that you just created, and copy the URL.
+Example: https://www.gihub.com/nithin/quest_python
+6. Run the command:
+	$> git close https://www.PAT@gihub.com/nithin_n/quest_python
+	PAT here is the personal access token
+7. Now run the commands:
+	git config --global user.name "nithin_n"
+	git config --global user.email "mtd.nithin@gmail.com"
+8. Now, open the VS code from the working folder.
+	You can see a folder with your repo name
+9. When ever we do any changes to the repo (adding or deleteing or modyfying files and folder), we must click on the version_control icon in VS code (Left most corner 3rd vertical icon). Now, in the message box, add the relevant message (day2 notes and programs are added) and click on COMMIT button. Next, click on the SYNC button and then click OK when you are prompted.
+------------------------------------------------------
+Program to count the number of digits in a number
+10) 145 (14
+       140
+           5
+145 // 10    Integer division (Quotient is always int)
+
+10) 145 (14.5
+       140
+            50
+            50
+145 / 10    Floating point division
+
+# Program to count the number of digits in a number
+
+input_number = int(input('Enter a number to count number of digits in it: '))
+
+count_of_digits = 0
+temp_number = input_number
+
+while temp_number != 0:
+    temp_number = temp_number // 10
+    count_of_digits += 1
+
+print(f'Number of digits in {input_number} is {count_of_digits}')
+
+inp=3475
+temp=3475
+c=0
+
+i=1
+temp=347
+c=1
+
+i=2
+temp=34
+c=2
+
+i=3
+temp=3
+c=3
+
+i=4
+temp=0
+c=4
+
+O/P: Number of digits in 3475 is 4
+
+Alternate and easy solution:
+input_number = int(input('Enter a number to count number of digits in it: '))
+
+count_of_digits = len(str(input_number))
+
+print(f'Number of digits in {input_number} is {count_of_digits}')
+------------------------------------------------------
+# Program to find sum of digits in of number
+
+input_number = int(input('Enter a number to find sum of digits in it: '))
+
+sum_of_digits = 0
+temp_number = input_number
+
+while temp_number != 0:
+    remainder_digit = temp_number % 10
+    temp_number = temp_number // 10
+    sum_of_digits += remainder_digit
+
+print(f'Sum of digits in {input_number} is {sum_of_digits}')
+
+Alternate solution:
+input_number = int(input('Enter a number to find sum of digits in it: ')) # read a number and store it as an integer
+
+numbers = [int(char) for char in str(input_number)] # convert the number into string and read character by character from the string using for loop and then convert each of the character to integer and store it in the list.
+
+print(numbers) # Print the list of numbers
+
+print(f'Sum of digits of {input_number} is {sum(numbers)}') # The sum() finds sum of the elements of the list
+------------------------------------------------------
+Program to count the number of Odd digits in a number
+
+
+------------------------------------------------------
+Program to accept number of lines of the Triangle and draw the Trianlge:
+*
+**
+***
+****
+*****
+
+number_of_lines = int(input('Enter number of lines of the Triangle: '))
+
+for i in range(1, number_of_lines+1):
+    print('*' * i)
+----------------------------------------------------------
+range() function in Python:
+
+The range function can be used in many ways:
+
+range(10)
+The start value is 0, end value is 9, increment is +1
+
+range(1, 11)
+The start value is 1, end value is 10, increment is +1
+
+range(2, 20, 3)
+The start value is 2, end value is less than 20, increment is +3
+
+range(25, 2, -2)
+The start value is 25, end value is greater than 2, increment is -2 which is nothing but, decrement of 2
+
+Nithin Trainer Repo: https://github.com/neelmyna/nithin_aug24
+-----------------------------------------------------
