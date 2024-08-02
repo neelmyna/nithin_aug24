@@ -1,20 +1,20 @@
-Akarsh A			: 
-Akshara Soman		: 1
-Albin Sabu			: 1,1
-Ameen Sha			: 
-Anushree T V		: 
-Archana Rajan		: 1
-Arsha T J			: 1
-Ashly Joshy			: 1
-Aswathy U S			: 
-Devika Ashok		: 1,1,1
-Gayathri M			: 1 
-Gokul D R			: 1
-Lubna Parveen		: 
-Shafin Shajahan		: 
-Sneha Mathai		: 1
-Sreejith J			: 1
-Tanveer Alam Ansari	: 
+Akarsh A			: 1
+Akshara Soman		: 1,1,1
+Albin Sabu			: 1,1,1,1
+Ameen Sha			: 1
+Anushree T V		: Absent since 31st July
+Archana Rajan		: 1,1
+Arsha T J			: 1,1,1
+Ashly Joshy			: 1,1,1
+Aswathy U S			: Absent since 31st July
+Devika Ashok		: 1,1,1,1
+Gayathri M			: 1,1,1,1
+Gokul D R			: 1,1
+Lubna Parveen		: Absent since 31st July
+Shafin Shajahan		: Absent since 31st July
+Sneha Mathai		: 1,1
+Sreejith J			: 1,1
+Tanveer Alam Ansari	: Absent since 1st Aug
 -------------------------------------------------------------
 https://github.com/GayathriiMadhu/quest_python
 
@@ -37,6 +37,8 @@ https://github.com/DevikaAshok12/Quest-Global-Python-Training.git
 https://github.com/Akshara112/quest_python
 
 https://github.com/arshatj361/quest_python
+
+https://github.com/Ameensha773/quest_python
 
 -------------------------------------------------------------
 ASSIGNMENTS:
@@ -68,4 +70,48 @@ day2 program assignments:
 9. Print a hollow square of n lines
 10.Print X shape made up of stars of n lines
 11.Print a hollow square of n line with the diagonals.
- 
+
+DAY3 ASSIGNMENTS:
+1. Accept N numbers from the user and swap the consecutive elements in the list.
+2. Find the smallest and biggest elements in a list of N numbers
+3. Print the smallest and biggest sized strings from a list of N strings.
+4. Remove the negative numbers from a list of N numbers.
+5. Demonstrate the different ways of adding elements to a list and different ways to delete elements from a list.
+6. Learn List slicing and List comprehension.
+-----------------------------------------------------
+whatsApp Update:
+
+1. Content of the day
+2. Feedback
+3. Assignments Done (Yes / No, with how many)
+4. Queries/Others
+EXAMPLE:
+1. Content of the day
+	Problem solving using Loops, Python List, List comprehension
+2. Feedback
+	The problem solving seamed to be challenging. The Trainer could have used the time more effectively in the sense that more problem could have been solved.
+3. Assignments Done (Yes / No, with how many)
+	5 coding assignments were gievn out of which 3 on Loops and 2 on Lists. All 5 problems I have solved and I have understood them and I have traced the logic with different set of I/P.
+4. Queries/Others
+	What are other IDEs we can use to code in Python? Will be learning OOP in this training?
+----------------------------------------------------------------
+day4 Assignments:
+Problems:
+1. User gives the data like this:
+kerala-tiruvanantapuram karnataka-bengaluru tamilnadu-chennai
+You have to separate the states and store in the list states[] and also the seperated capitals must be stored in capitals[]
+
+2. Accpet a string of space seperated numbers and store them as a matrix (list of lists) of n rows.
+Now print the matrix row-wise
+
+3. Accept N strings and count the number of Palindromes in it.
+
+4. Accept N strings, and check howmany of them possess the string X
+
+5. Accept N main strings and N sub strings into lists and check create a list of numbers of 0s and 1s where 0 represents that the sub string at respective index is not a substring of the main string.
+
+main_list = ['andhra pradesh', 'kerala', 'maharashtra', 'haryana']
+sub_list  = ['pradesh', 'south', 'rashtra', 'punjab']
+
+presence = [1, 0, 1, 0]
+------------------------------------------------

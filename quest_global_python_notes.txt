@@ -789,5 +789,283 @@ print('Squares2 = ', squares2)
 --------------------------------------
 Using Map and Lambda Function:
 
-squares3 = list(map(lambda x: x**2, range(10)))
+squares3 = list(map(lambda x: ((x**2) + int(math.sqrt(x))), range(10)))
 print('Squares3 = ', squares3)
+------------------------------------
+import math
+
+squares3 = list(map(lambda x: ((x**2) + int(math.sqrt(x))), range(10)))
+print('Squares3 = ', squares3)
+
+input_numbers = list(map(int, input().split()))
+print(input_numbers)
+
+'''
+input_numbers = list(map(int, input().split()))
+
+step1: input()
+Read a string
+
+step2: input().split()
+The string read by input() is split on spaces, because default delimiter(argument) of split is space
+
+input.split('@') # The delimiter here is '@'
+12@1@124@34@57
+'12', '1', '124', '34', '57'
+
+delimiter: The character that seperates 2 values
+
+step4:
+map(int, input().split())
+The many strings after applying split() on the input string is passed one by one to map()
+The map() is converting all the values (strings) into int and later all these int values we are using to create a list.
+'''
+-------------------------------------
+DAY4 FRIDAY 02-08-2024
+
+Find Nth term of the series: 1 2 2 3 3 5 5 7 8 11 13 13
+
+Odd  Position elements: 1 2 3 5 8    (N//2 + 1)th term 	O(n)
+Even Position elements: 2 3 5 7 11   N/2th term  		O(n square)
+
+
+Read N
+if N is odd:
+	print( find_nth_fibo_term(N//2+1) )
+else:
+	print( find_nth_prime_term(N//2) )
+----------------------------------------------------
+List Slicing:
+
+numbers = [2, 9, 7, 5, 3, 13, 19, 17, 29]
+print(numbers) # we get the complete list
+print(numbers[0]) # we get the 1st element
+print(numbers[-1]) # we get the last element
+Hence, we see that -ve indexing is possible in Python
+print(numbers[-2]) # we get last but element from the list
+print(numbers[:]) # we get the complete list
+Here, we have written nothing before the colon and hence it is treated as 0, which means start from the beginning of the list. Here also have not written anything after the colon, which means it is treated as UP TO END OF THE LIST. 
+print(numbers[:3]) # Start from index 0 and access elements up to index 3-1 which is 2.
+print(numbers[1:-1]) # Start from index 1 (2nd element) and access elements up to last but element, because -1 is the index of last element and we must not include it.
+print(numbers[1:8:2]) # start from index 1 and access upto index 8-1 and increment each time by 2 elements. So o/p is [9, 5, 3, 19]
+print(numbers[::3]) # start from biginning and go up to end of the list with increment of 3
+print(numbers[8:1:-2]) Start from index 8, go up to index 2 with decrement of 2 (or increment of -2)
+print(numbers[::-1]) # Since the increment is negative, we understand that we have to move in reverse (meaning from the end to towards the start). The area within the list we have to access is all the elements, because nothing is specified before and after the 1st colon :
+
+numbers = [1, 2, 3]
+print(numbers[:1:-2])
+The above statement will be treated as: print(numbers[-1:1:-2])
+So, start from last possible index, go upto index 1, with decrement of 2
+
+When ever we mention the increment as -ve and also, we have not mentioned where to start from, then Python always considers the start as the last element.
+And hence we get the answer here as [3]
+------------
+insert() It is used to insert element into a list at a specific index.
+append() It is used to add an element into the list at the end
+extend(iterable)
+Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] = iterable.
+
+numbers = [1, 2]
+numbers.append(3) #Alternate way of doing the append using list slicing:
+numbers[len(numbers):] = [3]
+numbers = [1, 2, 3]
+-----------------------------
+Global methods and keywords:
+numbers = [1, 2, 3, 4, 5]
+del numbers[1:3]
+print(numbers) # [1, 4, 5]
+del numbers[1]
+print(numbers) # [1, 5]
+del numbers[:] # we are deleting all the elements from the list
+print(numbers) # []
+numbers.insert(10, 0) # inserting the element 10 at index 0
+
+INSERT ELEMENT AT REAR OF THE LIST: 3 different ways
+a.insert(len(a), x)
+a.append(x)
+a.[len(a):] = [element]
+
+Below is an error
+numbers[len(numbers):] = 3
+TypeError because we must assign only a list(itarable) not a primitive value
+
+names = ['pune', 'panjim', 'purola', 'pulicat']
+
+names[len(names):] = ['paradise']
+names.append('pilibit')
+names.insert(-1, 'pilibit') # # adds the new element before the last element
+
+len()
+max()
+min()
+avg()
+
+numbers = [23, 7, 19, 41, 29, 3, 47]
+
+print('Max number = ', max(numbers))
+print('Min number = ', min(numbers))
+print('Number of elements = ', len(numbers))
+print('Sorted numbers = ', sorted(numbers))
+print('Numbers = ', numbers)
+numbers.sort()
+print('Numbers = ', numbers)
+------------------------------------------------
+Strings in Python
+Python string methods (Learn all the methods and how to use them and what they take as arguments and what they return and their return type).
+
+name = 'Cambodia'
+
+names = ['aizwal', 'imphal', 'shillong', 'agartala']
+
+print(name)
+print(name.upper())
+print(name.count('a'))
+print(name.count('A'))
+print(name.upper().count('A')) # we 1st convert the string into uppercase and then count the number of times the string 'A' is present in name ('Cambodia')
+print(name.upper().count('a'))
+print(name.find('o'))
+print(name.find('dia'))
+print(name.find('xx')) # returns -1 because the string we are trying to find ('xx') in name ('Cambodia)' is not present.
+-----------------------------------------------
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 = [1, 2, 3]
+
+num = 5
+if num in list1:
+	print('list1 has 5 in it')
+else:
+	print('list1 has no 5 in it')
+-------------------------------------
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 = [1, 2, 3]
+#Note: list1 has the elements of list2 in it but list1 doesn't contain the list2 in it
+
+if list2 in list1:
+	print('Yes, it has')
+else:
+	print('No, it has not')
+	
+list1 = [1, 2, 3, 4, 5, [1, 2, 3], 6, 7, 8, 9]
+list2 = [1, 2, 3]
+#Note: list1 has list2 in it as one of its element.
+
+if list2 not in list1:
+	print('List2 is not in List1')
+else:
+	print('List2 is in List1')
+------------------------------------------------
+We can use Relational operators on List objects.
+
+l1 = [3, 6, 9]
+l2 = [1, 2, 4, 12]
+
+if l1 < l2:
+	print('List1 is bigger')
+else:
+	print('List2 is bigger')
+-------------------------------------------
+DS OF PYTHON:
+List: [ ]
+Iterable, Ordered (Can do random access) and mutable
+Tuple: ( )
+Iterable, Ordered and immutable
+set: { }
+Non iterable, unordered (cannot use [] with index) and mutable
+Mainly used to compare 2 sets (intersection, compliment, union, difference etc.)
+Dictionary: { }
+DS of key-value pairs
+iterable using keys, ordered, mutable
+dictionary1 = { }
+
+list1 = []
+list1 = list()
+tuple1 = ()
+tuple2 = tuple()
+dictionary1 = { }
+dictionary2 = dict()
+set1 = set()
+print(type(dictionary1))
+print(type(set1))
+print(type(tuple1))
+-------------------------------------------
+VARIABLE NUMBER OF ARGS:
+It is this concept or tool of Python using which the Function overloading concept is implemented alternatively. Thus, there is no need to Overload funcstions/methods in Python.
+
+var arg function:
+A function that can take any number of arguments, from 0 to many.
+
+def varArgFunction1(*arguments):
+    print(arguments)
+    print(type(arguments)) # tuple
+
+def varArgFunction2(*arguments):
+    for i in range(len(arguments)):
+        print(arguments[i])
+
+varArgFunction1(1, 2, 4)
+varArgFunction1()
+varArgFunction1('list', 'tuple', 'set', 'dictionary')
+
+varArgFunction2(1, 2, 4)
+varArgFunction2()
+varArgFunction2('list', 'tuple', 'set', 'dictionary')
+
+''''
+def varArgFunction2(*arguments):
+        print(arguments)
+
+def varArgFunction2(*arguments):
+    for i in range(len(arguments)): #Loop with range() function
+        print(arguments[i])
+
+def varArgFunction2(*arguments):
+    for element in arguments: # for each loop. It accesses all elements of the tuple one by one
+        print(element)
+'''
+--------------------------------------------------------
+def varArgFunction1(*arguments):
+    print(arguments)
+    # arguments[1] = 22 # TypeError
+    arguments[5][0] = 20 # even though the list is inside the tuple, we can modify it.
+    print(arguments)
+    arguments[5].append(50)
+    print(arguments)
+
+varArgFunction1(1, 2, 4, 'list', 4.5, [2, 3, 5])
+--------------------------------------------------------
+def varArgFunction(*arguments): # receives the data into a tuple. However, if it has objects like list or dictionary, then they will received by reference only.
+    print(arguments)
+    arguments[0].remove(10)
+
+def myFunction(user_given_list): # receives refrence to the list numbers2
+    user_given_list.remove(35)
+
+numbers1 = [int(num) for num in input().split(',')]
+# input: 10,20,30,40,50
+print(numbers1)
+varArgFunction(numbers1)# the list here is passed by reference
+print(numbers1)
+
+numbers2 = list(map(int, input().split()))
+print(numbers2)
+myFunction(numbers2)
+print(numbers2)
+--------------------------------------------------------
+Problems:
+1. User gives the data like this:
+kerala-tiruvanantapuram karnataka-bengaluru tamilnadu-chennai
+You have to separate the states and store in the list states[] and also the seperated capitals must be stored in capitals[]
+
+2. Accpet a string of space seperated numbers and store them as a matrix (list of lists) of n rows.
+Now print the matrix row-wise
+
+3. Accept N strings and count the number of Palindromes in it.
+
+4. Accept N strings, and check howmany of them possess the string X
+
+5. Accept N main strings and N sub strings into lists and check create a list of numbers of 0s and 1s where 0 represents that the sub string at respective index is not a substring of the main string.
+
+main_list = ['andhra pradesh', 'kerala', 'maharashtra', 'haryana']
+sub_list  = ['pradesh', 'south', 'rashtra', 'punjab']
+
+presence = [1, 0, 1, 0]
