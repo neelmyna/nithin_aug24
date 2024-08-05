@@ -1051,21 +1051,98 @@ print(numbers2)
 myFunction(numbers2)
 print(numbers2)
 --------------------------------------------------------
-Problems:
-1. User gives the data like this:
-kerala-tiruvanantapuram karnataka-bengaluru tamilnadu-chennai
-You have to separate the states and store in the list states[] and also the seperated capitals must be stored in capitals[]
+DAY5 SATURDAY 03-08-2024
 
-2. Accpet a string of space seperated numbers and store them as a matrix (list of lists) of n rows.
-Now print the matrix row-wise
+# Program to create 1D Array (List) and find biggest and smallest numbers in it.
 
-3. Accept N strings and count the number of Palindromes in it.
+n = int(input('Enter size of the Array: '))
 
-4. Accept N strings, and check howmany of them possess the string X
+array = []
+print(f'Enter {n} numbers of the Array')
+for i in range(n):
+    array.append(int(input()))
 
-5. Accept N main strings and N sub strings into lists and check create a list of numbers of 0s and 1s where 0 represents that the sub string at respective index is not a substring of the main string.
+print('Array = ', array)
+small_num = array[0]
+big_num = array[0]
 
-main_list = ['andhra pradesh', 'kerala', 'maharashtra', 'haryana']
-sub_list  = ['pradesh', 'south', 'rashtra', 'punjab']
+for i in range(1, n):
+    if array[i] < small_num:
+        small_num = array[i]
+    if array[i] > big_num:
+        big_num = array[i]
+print(f'Biggest number in Array is {big_num}')
+print(f'Smallest number in Array is {small_num}')
+--------------------------------------------------------
+Read from the user the size of array, say N
+declare a empty list, say array = []
+Read N numbers from the user and store it in the array
+Assume the 1st element of the Array as both SMALL and BIG
+Now start comparing the SMALL and BIG values with remaining elements of the Array.
+	When ever you find a smaller element than that is in SMALL, replace the SMALL with the smaller element you found.
+	On Similar lines, find BIG
+Print SMALL and BIG as O/P
+--------------------------------------------
+# Program to create 2D Array, that is, a Matrix(using List) and add it to another Matrix and print the sum Matrix.
 
-presence = [1, 0, 1, 0]
+rows = int(input('Enter number of rows of the Matrix: '))
+columns = int(input('Enter number of columns of the Matrix: '))
+
+matrix1 = []
+for i in range(rows):
+    print(f'Enter {columns} numbers of Row-{i+1}')
+    row_numbers = [] # List that stores numbers of a specific row
+    for j in range(columns): # To read numbers of a row
+        row_numbers.append(int(input()))
+    matrix1.append(row_numbers)
+
+for row in matrix1:
+    for number in row:
+        print('%3s'%(number), end='')
+    print()
+-----------------------------------------------
+# Program to create a 3D Array
+'''
+1st read elements of a row
+add these rows into the Matrix
+Now read such N matrices and add them all to the 3D Array
+'''
+
+matrices = int(input('Enter the number of Matrices in 3D array: '))
+rows = int(input('Enter number of rows of each Matrix: '))
+columns = int(input('Enter number of columns of each row: '))
+
+array_3d = []
+for i in range(matrices):
+    matrix = []
+    print(f'Enter elements of the Matrix-{i+1}')
+    for j in range(rows):
+        row = []
+        for k in range(columns):
+            row.append(int(input()))
+        matrix.append(row)
+    array_3d.append(matrix)
+
+print(array_3d)
+---------------------------------------------------------
+Magic Mirror Problem:
+
+Read original_string
+Read rotated_string
+
+Check if the rotated_string is rotated string of the original_string or not.
+
+o_str = kerala
+r_str = alaker
+
+r_str = realak
+
+original_str = input('Enter the original string: ')
+rotated_str = input('Enter the rotated string: ')
+
+temp_str = rotated_str * 2
+if temp_str.find(original_str) != -1:
+    print(f'{rotated_str} is rotated string of {original_str}')
+else:
+    print(f'{rotated_str} is Not rotated string of {original_str}')
+-------------------------------------------------

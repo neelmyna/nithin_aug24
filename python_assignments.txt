@@ -1,13 +1,13 @@
 Akarsh A			: 1
 Akshara Soman		: 1,1,1
-Albin Sabu			: 1,1,1,1
+Albin Sabu			: 1,1,1,1,1
 Ameen Sha			: 1
 Anushree T V		: Absent since 31st July
 Archana Rajan		: 1,1
 Arsha T J			: 1,1,1
 Ashly Joshy			: 1,1,1
 Aswathy U S			: Absent since 31st July
-Devika Ashok		: 1,1,1,1
+Devika Ashok		: 1,1,1,1,1
 Gayathri M			: 1,1,1,1
 Gokul D R			: 1,1
 Lubna Parveen		: Absent since 31st July
@@ -79,7 +79,7 @@ DAY3 ASSIGNMENTS:
 5. Demonstrate the different ways of adding elements to a list and different ways to delete elements from a list.
 6. Learn List slicing and List comprehension.
 -----------------------------------------------------
-whatsApp Update:
+whatsApp Update: EXAMPLE GIVEN BY TRAINER
 
 1. Content of the day
 2. Feedback
@@ -115,3 +115,90 @@ sub_list  = ['pradesh', 'south', 'rashtra', 'punjab']
 
 presence = [1, 0, 1, 0]
 ------------------------------------------------
+Akarsh 		- 1 - Lauren has a ...
+Akshara 	- 2 - Rajesh is preparing for GATE (2 sheets)
+Albin		- 3 - Maximum element IN THE Stack (2 sheets)
+Archana		- 4 - Harry Potter and Sorceror's (3 sheets)
+Arsha		- 5 - Tisha went to her Orchad
+Ashly		- 6 - Tsubasa and his Fest (2 sheets)
+Gokul		- 7 - You are given with a deck of n cards
+Devika		- 8 - You are given a string containing A and B only
+Gayatri		- 9 - Harsha is working as a programmer
+Sreejith	- 10- Riya was planning to invent a game of shifting
+Sneha		- 11- Shreya and her mon went to shopping
+---------------------------------
+Gayatri: CODING: 9 out of 10,  VIVA: 4/5
+coding problem solved. o/p shown and explained. Only one probelm solved:
+Viva questions:
+1. how can we know the index of a character or a sub string in a string ? Not answered
+2. difference between list and tuple. Answered
+3. What does the pop() method of string class do
+4. What are the different ways to delete an element from a list? answered partly.
+5. If I using append() and pop() methods on a list, which DS I am implementing ? Answered
+--------------------------
+Albin: CODING: 8/10,  VIVA: 4/5
+coding problem solved. o/p shown and explained. Only one probelm solved:
+Viva questions:
+1. If I want to impliment Queue using list, which methods will you use ? half answered
+2. which method will u use to remove leading and trailing spaces from a string ? Not answered.
+3. What are the different types of errors we get during runtime?
+answered.
+4. what is a lambda function ? answered.
+---------------------------
+Arsha TJ: CODING: 6/10, VIVA: 2/5
+Coding completed, but explanation was not complete. VIVA: 
+1. what are the aggregate functions available in Python? half answered.
+2. What are the methods that you can recall on string object? half answered.
+3. What are the methods that you can recall on list object? half answered.
+4. What are ways we can use "del" on a list ? Not answered
+-------------------------------
+Devika: CODING: 9/10, VIVA: 3/5
+Coding logic was explained very good.
+Viva Questions
+1. What are ways we can use "del" on a list ? half answered
+2. What is NameError ? answered
+3. What is TypeError ? half answered
+4. What methods on string do you remember ? answered
+------------------
+Akarsh: CODING: 8/10 VIVA: 4/5 
+Coding demonstraion was good
+Viva questions:
+1. what is the difference between (answered)
+del list1
+del list1[2]
+del list1[2:5]
+2. What are the aggregate functions in Python ? (half answered)
+3. What are different ways to add an element into a list? answered
+4. what is list comprehension? given an example. Answered
+----------------
+Gokul: CODING: 9/10  VIVA: 4/5
+viva questions:
+1. What are the different ways to impliment Stack using list? answered
+2. How can I insert and delete element at front from the list? and what DS it would be? Stack
+3. Different ways of creating a list. Answered
+----------------------------
+Sneha: CODING: 8/10 VIVA: 3/5
+viva questions:
+1. What kind of language is Python? answered
+2. What is pass in Python? half answered
+3. How do you swap 2 numbers in Python? not answered
+4. Define 1st line of a function that takes var args ? answered
+5. Can we pass a function as an argument in Python ? half answered
+-----------------------------
+Sreejith: CODING: 8/10 VIVA: 3/5
+viva questions
+1. Different ways to use range()? answered
+2. How do you reverse a string in Python ? half answered
+3. What is the difference between sorted() and sort(). Answered
+4. write a code snippet to convert string into list. Half answered
+5. write code snippet to convert list into string. half answered
+---------------------------
+Akshara Soman: CODING: VIVA:
+viva questions:
+1. 
+2. 
+3. 
+4. 
+5. 
+
+
