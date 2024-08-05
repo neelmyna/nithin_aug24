@@ -1360,3 +1360,54 @@ except XShapeException as e:
     except:
         print('Some error occured while handling the exception')
 -----------------------------------
+PDB (Python Debugger)
+
+python -m pdb <name>.py[args] 		(begin the debugger)
+
+help[command] view a list of commands, or view help for a specific
+command
+
+within a python file:
+import pdb
+...
+pdb.set_trace() 
+Add the above call to begin the debugger at this line when the file is run normally.
+
+NAVIGATING CODE: (within the Pdb interpreter)
+l(ist) 		list 11 lines surrounding the current line
+w(here) 	display the file and line number of the current line
+n(ext) 		execute the current line
+s(tep) 		step into function called at the current line
+r(eturn) 	execute until the current function’s return is
+encountered
+
+CONTROLLING EXECUTION:
+b[#] 		create a breakpoint at line [#]
+b 			list breakpoints and their indices
+c(ontinue)	execute until a breakpoint is encountered
+clear[#] 	clear breakpoint of index [#]
+
+CHANGING VARIABLES / INTERACTING WITH CODE:
+p<name> 	print value of the variable <name>
+!<expr> 	execute the expression <expr>
+NOTE: this acts just like a python interpreter
+run[args] 	restart the debugger with sys.argv arguments [args]
+q(uit) exit the debugger
+----------------------------------------------------
+PDB COMMANDS:
+list or l:
+Lists 1st 10 lines of the code
+
+Note: if you use list command continuously, then it lists the next set of instructions.
+
+step:
+Moves/goes into the next function/method and stops at its beginning
+
+longlist or ll:
+Lists all lines of the code from the beginning to the end of file or may be upto 100 lines.
+
+b[#] 	create a breakpoint at line [#]
+When ever, the pdb encounters a break point, it halts there until Enter key is hit.
+--------------------------------------------
+
+
