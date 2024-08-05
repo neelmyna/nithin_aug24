@@ -1146,3 +1146,217 @@ if temp_str.find(original_str) != -1:
 else:
     print(f'{rotated_str} is Not rotated string of {original_str}')
 -------------------------------------------------
+Read N (the number of bills)
+Read N numbers of the list (N bill amounts)
+count_of_perfect_squares = 0
+Now run a loop and access each element of the list
+	check if element is PS:
+		count_of_perfect_squares += 1
+print count_of_perfect_squares
+------------------------------------------------------
+def apply_operation(func, x, y):
+  return func(x, y)
+
+def add(a, b):
+  return a + b
+
+def subtract(a, b):
+  return a - b
+
+result1 = apply_operation(add, 5, 3)  # Pass the 'add' function as an argument
+print(result1)
+
+result2 = apply_operation(subtract, 10, 4)  # Pass the 'subtract' function as an argument
+print(result2)
+------------------------------------------------------
+DAY6 05-08-2024 MONDAY
+
+Exception Handling:
+
+Errors:
+Syntax Error:
+Going against the rule(syntax) of the language.
+For example we cannot use PRINT in place of print.
+We cannot end a statement with semicolon.
+We should not use braces {} for blocks
+The Syntax errors is highlighted by the IDE or the Editor while tying the code.
+Once, the Syntax is correct, we can run the script (code/program).
+If syntax is correct every where in the code, then the code runs.
+EXCEPTION:
+However, if during runtime, if some instruction is unable to run (even though the syntax is correct) then a runtime error occurs which we call it as Exception.
+Note that when a statement/instruction is suppose to run but it cannot run, because an instruction is nothing but a TASK to do. But if we are unable to do this task, then in such a case, the execution cannot continue and the Python Interpretor stops the execution then and there.
+Now, this situation is very uneasy.
+Hence to handle such a situation, that to handle the exception that is created, to handle the situation where normal flow of execution cannot be continued, we say Exception Handling is required.
+
+my_input = input() # abc1234
+my_number = int(my_input) # is not possible and we call it as impossible situation and this is when the Exception occurs.
+All exceptions are predefined. However, we can create our own exception. In the above statement, TypeError occurs. According to Python naming standards, all exception names must end with "Error"
+And all exception names must be capitalized (1st letter of every word in uppercase)
+
+THE DIFFERENT TYPES OF EXCEPTIONS ARE:
+AssertionError:
+Raised when the assert statement fails.
+AttributeError:
+Raised on the attribute assignment or reference fails.
+EOFError:
+Raised when the input() function hits the end-of-file condition.
+FloatingPointError:
+Raised when a floating point operation fails.
+GeneratorExit:
+Raised when a generator's close() method is called.
+ImportError:
+Raised when the imported module is not found.
+IndexError:
+Raised when the index of a sequence is out of range.
+KeyError:
+Raised when a key is not found in a dictionary.
+KeyboardInterrupt:
+Raised when the user hits the interrupt key (Ctrl+c or delete).
+MemoryError:
+Raised when an operation runs out of memory.
+NameError:
+Raised when a variable is not found in the local or global scope.
+NotImplementedError:
+Raised by abstract methods.
+OSError:
+Raised when a system operation causes a system-related error.
+OverflowError:
+Raised when the result of an arithmetic operation is too large to be represented.
+ReferenceError:
+Raised when a weak reference proxy is used to access a garbage collected referent.
+RuntimeError:
+Raised when an error does not fall under any other category.
+StopIteration:
+Raised by the next() function to indicate that there is no further item to be returned by the iterator.
+SyntaxError:
+Raised by the parser when a syntax error is encountered.
+IndentationError:
+Raised when there is an incorrect indentation.
+TabError:
+Raised when the indentation consists of inconsistent tabs and spaces.
+SystemError:
+Raised when the interpreter detects internal error.
+SystemExit:
+Raised by the sys.exit() function.
+TypeError:
+Raised when a function or operation is applied to an object of an incorrect type.
+UnboundLocalError:
+Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable.
+UnicodeError:
+Raised when a Unicode-related encoding or decoding error occurs.
+UnicodeEncodeError:
+Raised when a Unicode-related error occurs during encoding.
+UnicodeDecodeError:
+Raised when a Unicode-related error occurs during decoding.
+UnicodeTranslateError:
+Raised when a Unicode-related error occurs during translation.
+ValueError:
+Raised when a function gets an argument of correct type but improper value.
+ZeroDivisionError:
+Raised when the second operand of a division or module operation is zero.
+
+Exception: An error caused during runtime.
+When an instruction which is suppose to do a task which is impossible, then an Exception occurs.
+In such a situation, the Python stops the execution and retunrs the exception occured.
+
+To hanlde such a situation where we cannot continue with the normal flow of execution but, we can do some other thing; To achieve this we have the concept of Exception handling.
+
+When ever an exception occurs, an object of the respective Error class is created which must be catched. And we have to provide some solution for the exception.
+
+Where ever we SUSPECT that an exdeption may occur in one or more instructions such instructions must be put into TRY block.
+For a try block, one or more instructions in it may cause errors. For each type of errors, we code one "except" block. Thus for one try block there must be at least one except block and there can be many except blocks also.
+
+We can explicitly create an exception with the keyword "raise".
+Example:
+
+try:
+    my_input = input('Enter a number: ')
+    my_number = int(my_input)
+    print(f'User given number is {my_number}')
+except TypeError:
+    print('Normal flow of execution is disturbed')
+    print('Type of the data mis-matched')
+except IndexError:
+    print('Normal flow of execution is disturbed')
+    print('You tried to access data from outside the List')
+except:
+    print('Normal flow of execution is disturbed')
+    print('Some error occured during runtime')
+print('The normal flow of execution is continued...')
+------------------------------------------------------
+DICTIONARY:
+capital_cities = { 560001 : 'Bengaluru', 110001 : "New Delhi", 330001 : "Kolkata"}
+
+city_ppopulation = {"mysuru" : 2000000, "kochi" : "3500000", "coimbatore" : 4000000, "vishakapatnam" : 3500000, "vijayawada" : 4000000}
+
+try:
+    print('Kochi population is: ', city_population["kochi"])
+    print('Mysuru population is: ', city_population["mysuru"])
+    print('Madurai population is: ', city_population["madurai"])
+except KeyError:
+    print('The city\'s population you wish to print does\'t exist')
+except: # generic except block. IT works for any type of error
+    print('Some error occured')
+
+# NOTE: The generic except clause (catch all except clause) must defined always at the end. Because, when ever an exception occurs, then except blocks defined in the top to bottom are compared in order.
+---------------------------------------------------
+def check(list1, name):
+	try:
+		total = 0
+		for ele in list1:
+			total += int(ele)
+		avg = total // len(list1)
+		pwd = avg + name
+		return int(pwd)
+	except ValueError:
+		print('Value error while check')
+	except TypeError:
+		print('Type error while check')
+	except NameError:
+		print('Name error while check')
+	finally:
+		print('Finally in called function')
+	print('From end of inside of method')
+
+list1 = [10, 20, 30, 40, 50, 60, '7A']
+try:
+	check(list1, 'ABC')
+except NameError:
+	print('Name error in Main')
+finally:
+	print('Finally in Main')
+-------------------------------------
+class XShapeException(Exception):
+    def printError(self, errorMessage):
+        print(errorMessage)
+
+number_of_lines = int(input('Enter number of lines to print X shape: '))
+try:
+    if number_of_lines % 2 == 0:
+        raise XShapeException
+    else:
+        # Logic to draw the X shape
+        print('Consider X shape is drawn')
+except XShapeException as e:
+    e.printError('Invalid input was given')
+------------------------------
+EXAMPLE FOR TRY BLOCK INSIDE THE EXCEPT BLOCK:
+
+class XShapeException(Exception):
+    def printError(self, errorMessage):
+        print(errorMessage)
+
+number_of_lines = int(input('Enter number of lines to print X shape: '))
+try:
+    if number_of_lines % 2 == 0:
+        raise XShapeException
+    else:
+        # Logic to draw the X shape
+        print('Consider X shape is drawn')
+except XShapeException as e:
+    try:
+        e.printError('Invalid input was given')
+        e.removeError()
+    except:
+        print('Some error occured while handling the exception')
+-----------------------------------

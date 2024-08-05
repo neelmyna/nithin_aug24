@@ -1,14 +1,17 @@
+class XShapeException(Exception):
+    def printError(self, errorMessage):
+        print(errorMessage)
+
+number_of_lines = int(input('Enter number of lines to print X shape: '))
 try:
-    my_input = input('Enter a number: ')
-    my_number = int(my_input)
-    print(f'User given number is {my_number}')
-except TypeError:
-    print('Normal flow of execution is disturbed')
-    print('Type of the data mis-matched')
-except IndexError:
-    print('Normal flow of execution is disturbed')
-    print('You tried to access data from outside the List')
-except:
-    print('Normal flow of execution is disturbed')
-    print('Some error occured during runtime')
-print('The normal flow of execution is continued...')
+    if number_of_lines % 2 == 0:
+        raise XShapeException
+    else:
+        # Logic to draw the X shape
+        print('Consider X shape is drawn')
+except XShapeException as e:
+    try:
+        e.printError('Invalid input was given')
+        e.removeError()
+    except:
+        print('Some error occured while handling the exception')
